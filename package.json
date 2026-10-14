@@ -1,0 +1,21 @@
+{
+  "name": "multilingual-content-kit",
+  "version": "0.1.0",
+  "description": "Type-safe helpers for multilingual headless CMS content: Zod-validated Strapi v5 responses, locale fallback and hreflang alternates with translated slugs.",
+  "license": "MIT",
+  "author": "Kadir Can",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts",
+    "verify": "npm run typecheck && npm test"
+  },
+  "dependencies": { "zod": "^4.3.0" },
+  "devDependencies": { "@types/node": "^22.0.0", "tsx": "^4.21.0", "typescript": "^5.9.0" }
+}
